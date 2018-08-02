@@ -145,6 +145,7 @@ public class Principal {
 		}
 		int s = lireEntier();
 		
+		
 		System.out.println("Indiquer la date du jour : ");
 		String j = lireChaine();
 		
