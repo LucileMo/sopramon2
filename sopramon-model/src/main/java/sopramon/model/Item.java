@@ -3,15 +3,17 @@ package sopramon.model;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
 
-
+@Entity
 
 public class Item {
 @Id
@@ -29,6 +31,9 @@ private Double prix;
 private String capacite;
 @OneToMany(mappedBy="Item")
 private List<Achat> achats;
+@Column(name="ITEM_STOCK")
+@PositiveOrZero
+private int Stock;
 
 
 
