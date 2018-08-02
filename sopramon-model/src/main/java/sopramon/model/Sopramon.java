@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.PositiveOrZero;
@@ -20,24 +22,29 @@ public class Sopramon extends Utilisateur implements ICombattant {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="SOP_ID")
+@Column(name="SOPRA_ID")
 private int id;
-@Column(name="SOP_DATE")
+@Column(name="SOPRA_DATE")
 @Temporal(TemporalType.TIMESTAMP)
 private java.util.Date Date;
 private Date dateNaissance;
-@Column(name="SOP_EXPERIENCE")
+@Column(name="SOPRA_EXPERIENCE")
 @PositiveOrZero
 private int experience;
-@Column(name="SOP_NIVEAU")
+@Column(name="SOPRA_NIVEAU")
 @PositiveOrZero
 private int niveau;
-@Column(name="SOP_ARGENT")
+@Column(name="SOPRA_ARGENT")
 @PositiveOrZero
 private double argent;
 //lien capacite
+@OneToOne
+@JoinColumn(name ="SOPRA_CAPACITE_ID")
 private Capacite capacite;
+
 //lien signe
+@OneToOne
+@JoinColumn(name ="SOPRA_SIGNE_ID")
 private Signe signe;
 //lien utilisateur
 private Utilisateur utilisateur;
