@@ -11,19 +11,17 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.PositiveOrZero;
 
 @Entity
-
+@PrimaryKeyJoinColumn(name="SOPRA_ID", referencedColumnName="UTIL_ID")
 public class Sopramon extends Utilisateur implements ICombattant {
 	
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="SOPRA_ID")
-private int id;
+
 @Column(name="SOPRA_DATE")
 @Temporal(TemporalType.TIMESTAMP)
 private java.util.Date Date;
@@ -55,12 +53,8 @@ private List<Combat> combats;
 
 
 
-public int getId() {
-	return id;
-}
-public void setId(int id) {
-	this.id = id;
-}
+
+
 
 public Capacite getCapacite() {
 	return capacite;
