@@ -1,4 +1,4 @@
-package sopramon.DAO;
+package DAOSQL;
 
 import java.sql.Connection;
 
@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import sopramon.DAO.IDAOSopramon;
 import sopramon.model.Capacite;
 import sopramon.model.Signe;
 import sopramon.model.Sopramon;

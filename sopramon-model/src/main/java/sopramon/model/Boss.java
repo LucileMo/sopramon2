@@ -76,12 +76,14 @@ public class Boss implements ICombattant {
 		this.nom = nom;
 	}
 
-	public List<Combat> getCombat() {
-		return combat;
+
+
+	public List<Combat> getCombats() {
+		return combats;
 	}
 
-	public void setCombat(List<Combat> combat) {
-		this.combat = combat;
+	public void setCombats(List<Combat> combats) {
+		this.combats = combats;
 	}
 
 	public int getNiveau() {
