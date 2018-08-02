@@ -39,14 +39,10 @@ private double argent;
 @OneToOne
 @JoinColumn(name ="SOPRA_CAPACITE_ID")
 private Capacite capacite;
-
-//lien signe
+//lien signe 
 @OneToOne
 @JoinColumn(name ="SOPRA_SIGNE_ID")
 private Signe signe;
-//lien utilisateur
-private Utilisateur utilisateur;
-@OneToMany(mappedBy="Sopramon")
 private List<Achat> achats;
 @OneToMany(mappedBy="Sopramon")
 private List<Combat> combats;
@@ -100,12 +96,6 @@ public java.util.Date getDate() {
 }
 public void setDate(java.util.Date date) {
 	Date = date;
-}
-public Utilisateur getUtilisateur() {
-	return utilisateur;
-}
-public void setUtilisateur(Utilisateur utilisateur) {
-	this.utilisateur = utilisateur;
 }
 public List<Achat> getAchats() {
 	return achats;
