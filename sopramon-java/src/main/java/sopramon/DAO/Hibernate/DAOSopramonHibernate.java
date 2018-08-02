@@ -9,7 +9,6 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 
-
 import sopramon.DAO.IDAOSopramon;
 import sopramon.model.Sopramon;
 
