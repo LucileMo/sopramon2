@@ -77,7 +77,6 @@ public class Principal {
 			System.out.println("Pour " + p.getNom());
 			System.out.println(p.getCapacite().getPointsDeVie() + " points de vie.");
 			System.out.println("Signe : "+ p.getSigne().getNom() + " Type : " + p.getSigne().getTypeNom());
-			System.out.println("Taper : " + p.getUtilisateur());
 			System.out.println("-----------------------------");
 		}
 		
@@ -142,7 +141,6 @@ public class Principal {
 			System.out.println(p.getNom());
 			System.out.println(p.getCapacite().getPointsDeVie() + " points de vie.");
 			System.out.println(p.getSigne().getNom());
-			System.out.println(p.getUtilisateur());
 			System.out.println("-----------------------------");
 		}
 		int s = lireEntier();

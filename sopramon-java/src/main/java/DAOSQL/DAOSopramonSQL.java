@@ -68,7 +68,6 @@ public class DAOSopramonSQL extends DAOSQL implements IDAOSopramon {
 			mysopramon.setArgent(myResult.getInt("SOPRA_ARGENT"));
 			mysopramon.setCapacite(myCapacite);
 			mysopramon.setSigne(mySigne);
-			mysopramon.setUtilisateur(myResult.getInt("SOPRA_UTILISATEUR_ID"));
 			mesSopramons.add(mysopramon);
 
 			}
@@ -128,7 +127,7 @@ public class DAOSopramonSQL extends DAOSQL implements IDAOSopramon {
 				mysopramon.setArgent(myResult.getInt("SOPRA_ARGENT"));
 				mysopramon.setCapacite(myCapacite);
 				mysopramon.setSigne(mySigne);
-				mysopramon.setUtilisateur(myResult.getInt("SOPRA_UTILISATEUR_ID"));
+				
 				return mysopramon;
 
 			}

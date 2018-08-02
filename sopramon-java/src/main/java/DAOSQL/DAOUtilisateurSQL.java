@@ -68,7 +68,7 @@ public class DAOUtilisateurSQL extends DAOSQL implements IDAOUtilisateur {
 			mysopramon.setArgent(myResult.getInt("SOPRA_ARGENT"));
 			mysopramon.setCapacite(myCapacite);
 			mysopramon.setSigne(mySigne);
-			mysopramon.setUtilisateur(myResult.getInt("SOPRA_UTILISATEUR_ID"));
+			
 			
 			Utilisateur myutilisateur = new Utilisateur();
 			myutilisateur.setId(myResult.getInt("UTIL_ID"));
@@ -138,7 +138,7 @@ public class DAOUtilisateurSQL extends DAOSQL implements IDAOUtilisateur {
 				mysopramon.setArgent(myResult.getInt("SOPRA_ARGENT"));
 				mysopramon.setCapacite(myCapacite);
 				mysopramon.setSigne(mySigne);
-				mysopramon.setUtilisateur(myResult.getInt("SOPRA_UTILISATEUR_ID"));
+
 				
 				
 				Utilisateur myutilisateur = new Utilisateur();
