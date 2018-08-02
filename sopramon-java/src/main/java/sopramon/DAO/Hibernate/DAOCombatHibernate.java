@@ -8,9 +8,13 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 
+
+import sopramon.DAO.IDAOCombat;
 import sopramon.model.Combat;
 
-public class DAOCombatHibernate {
+
+
+public class DAOCombatHibernate	extends DAOHibernate implements IDAOCombat {
 
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("PersistenceUnit");
 	EntityManager em = emf.createEntityManager();
