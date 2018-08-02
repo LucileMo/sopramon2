@@ -1,4 +1,4 @@
-package sopramon.DAO;
+package DAOSQL;
 import java.sql.Connection;
 
 import java.sql.DriverManager;
@@ -12,6 +12,7 @@ import java.util.List;
 
 import sopramon.model.Combat;
 import sopramon.model.Sopramon;
+import sopramon.DAO.IDAOCombat;
 import sopramon.model.Arene;
 import sopramon.model.Type;
 

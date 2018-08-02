@@ -1,4 +1,4 @@
-package sopramon.DAO;
+package DAOSQL;
 
 import java.sql.Connection;
 

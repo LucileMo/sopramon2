@@ -2,6 +2,11 @@ package sopramon;
 
 import java.util.Date;
 import java.util.Scanner;
+
+import DAOSQL.DAOCombatSQL;
+import DAOSQL.DAOSopramonSQL;
+import DAOSQL.DAOUtilisateurSQL;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -9,9 +14,6 @@ import java.text.SimpleDateFormat;
 import sopramon.model.Combat;
 import sopramon.model.Sopramon;
 import sopramon.model.Utilisateur;
-import sopramon.DAO.DAOCombatSQL;
-import sopramon.DAO.DAOSopramonSQL;
-import sopramon.DAO.DAOUtilisateurSQL;
 import sopramon.DAO.IDAOCombat;
 import sopramon.DAO.IDAOSopramon;
 import sopramon.DAO.IDAOUtilisateur;
