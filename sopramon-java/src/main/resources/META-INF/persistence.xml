@@ -6,18 +6,18 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/x
 <persistence-unit name="NomPersistenceUnit" transaction-type="RESOURCE_LOCAL">
 
 <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-<class>soprmaon.model.Achat</class>
-<class>soprmaon.model.Administrateurr</class>
-<class>soprmaon.model.Arene</class>
-<class>soprmaon.model.Boss</class>
-<class>soprmaon.model.Capacite</class>
-<class>soprmaon.model.Combat</class>
-<class>soprmaon.model.Coup</class>
-<class>soprmaon.model.Item</class>
-<class>soprmaon.model.Signe</class>
-<class>soprmaon.model.Sopramon</class>
-<class>soprmaon.model.Type</class>
-<class>soprmaon.model.Utilisateur</class>
+<class>sopramon.model.Achat</class>
+<class>sopramon.model.Administrateurr</class>
+<class>sopramon.model.Arene</class>
+<class>sopramon.model.Boss</class>
+<class>sopramon.model.Capacite</class>
+<class>sopramon.model.Combat</class>
+<class>sopramon.model.Coup</class>
+<class>sopramon.model.Item</class>
+<class>sopramon.model.Signe</class>
+<class>sopramon.model.Sopramon</class>
+<class>sopramon.model.Type</class>
+<class>sopramon.model.Utilisateur</class>
 
 <properties>
 <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/sopramongame" />

@@ -6,7 +6,6 @@ import sopramon.model.Item;
 
 public class SopramonHibernate {
 
-	public static class PrincipalHibernate {
 
 		public static void main(String[] args) {
 
@@ -24,4 +23,3 @@ public class SopramonHibernate {
 
 	}
 
-}
