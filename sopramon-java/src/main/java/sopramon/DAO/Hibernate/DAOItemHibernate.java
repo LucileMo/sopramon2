@@ -2,7 +2,7 @@ package sopramon.DAO.Hibernate;
 
 import java.util.List;
 
-import fr.formation.model.Client;
+
 import sopramon.DAO.IDAOItem;
 import sopramon.model.Item;
 
