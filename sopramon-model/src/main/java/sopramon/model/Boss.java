@@ -31,7 +31,7 @@ public class Boss implements ICombattant {
 
 	@Column(name = "BOSS_NOM", length = 45, nullable = false)
 	@NotEmpty
-	@Size(max = 50)
+	@Size(max = 45)
 	public String nom;
 
 	@Column(name = "BOSS_NIVEAU", length = 50, nullable = false)
