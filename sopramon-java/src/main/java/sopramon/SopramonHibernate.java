@@ -18,7 +18,7 @@ public class SopramonHibernate {
     }
 
 			public static void printItems() {
-				IDAOItem daoItem = new DAOItemHibernate();
+				IDAOItem IDAOItem = new DAOItemHibernate();
 				
 				for (Item i : IDAOItem.findAll()) {
 					System.out.println(i.getNom());
@@ -31,4 +31,3 @@ public class SopramonHibernate {
 
 	}
 
-}
