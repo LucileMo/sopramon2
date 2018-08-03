@@ -45,7 +45,7 @@ public class DAOCombatSQL extends DAOSQL implements IDAOCombat{
                 myCombat.setArene(Arene.values()[myResult.getInt("COMB_ARENE") - 1]);
                 myCombat.setType(Type.values()[myResult.getInt("COMB_TYPE") - 1]);
                 myCombat.setTours(myResult.getInt("COMB_TOUR"));
-                myCombat.setBoss(myResult.getInt("COMB_BOSS_ID"));
+              //  myCombat.setBoss(myResult.getInt("COMB_BOSS_ID"));
                 myCombat.setSopramon(myResult.getInt("COMB_SOPRAMON_ID"));
                 mescombats.add(myCombat);
             }
@@ -76,7 +76,7 @@ public class DAOCombatSQL extends DAOSQL implements IDAOCombat{
                 myCombat.setArene(Arene.values()[myResult.getInt("COMB_ARENE") - 1]);
                 myCombat.setType(Type.values()[myResult.getInt("COMB_TYPE") - 1]);
                 myCombat.setTours(myResult.getInt("COMB_TOUR"));
-                myCombat.setBoss(myResult.getInt("COMB_BOSS_ID"));
+              //  myCombat.setBoss(myResult.getInt("COMB_BOSS_ID"));
                 myCombat.setSopramon(myResult.getInt("COMB_SOPRAMON_ID"));
                 return myCombat;
             }
@@ -131,7 +131,7 @@ public class DAOCombatSQL extends DAOSQL implements IDAOCombat{
                 myStatement.setInt(3, 1);
                 myStatement.setInt(4, 3);
                 myStatement.setInt(5, entity.getTours());
-                myStatement.setInt(6, entity.getBoss());
+             //   myStatement.setInt(6, entity.getBoss());
                 myStatement.setInt(7, entity.getSopramon());
                 
             
