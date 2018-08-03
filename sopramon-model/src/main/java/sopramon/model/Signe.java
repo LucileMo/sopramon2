@@ -14,13 +14,18 @@ public class Signe{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "SIGNE_ID")
+	@Column(name = "SIG_ID")
 	private int id;
-	@Column(name = "BOSS_NOM", length = 45, nullable = false)
+	@Column(name = "SIG_NOM", length = 45, nullable = false)
 	@NotEmpty
 	@Size(max = 45)
 	private String nom;
+	@Column(name = "SIG_TYPE")
+	@NotEmpty
 	private Type type;
+	@Column(name = "SIG_TYPE_NOM", length = 45, nullable = false)
+	@NotEmpty
+	@Size(max = 45)
 	private String typeNom;
 	private Signe faiblesse;
 	private Signe avantage;
