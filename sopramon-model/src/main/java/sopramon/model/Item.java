@@ -37,6 +37,12 @@ private int Stock;
 
 
 
+public int getStock() {
+	return Stock;
+}
+public void setStock(int stock) {
+	Stock = stock;
+}
 public List<Achat> getAchats() {
 	return achats;
 }

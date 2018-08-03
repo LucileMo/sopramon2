@@ -52,6 +52,7 @@ private List<Combat> combats;
 
 
 
+
 public Capacite getCapacite() {
 	return capacite;
 }

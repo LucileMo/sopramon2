@@ -2,6 +2,8 @@ package sopramon.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +22,7 @@ public class Signe{
 	@NotEmpty
 	@Size(max = 45)
 	private String nom;
-	@Column(name = "SIG_TYPE")
+	@Enumerated(EnumType.STRING)
 	@NotEmpty
 	private Type type;
 	@Column(name = "SIG_TYPE_NOM", length = 45, nullable = false)
