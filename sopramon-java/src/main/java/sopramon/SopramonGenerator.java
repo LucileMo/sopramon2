@@ -2,8 +2,8 @@ package sopramon;
 
 import java.util.Date;
 
+import sopramon.DAO.IDAOSopramon;
 import sopramon.DAO.IDAOUtilisateur;
-import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
 import sopramon.model.Utilisateur;
 
 public class SopramonGenerator {
@@ -20,7 +20,9 @@ public class SopramonGenerator {
 		myUtilisateur.setPassword("");
 
 		daoUtilisateur.save(myUtilisateur);
-
+		
+		
+		
 	}
 
 }
