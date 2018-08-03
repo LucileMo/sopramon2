@@ -7,22 +7,29 @@ import sopramon.model.Item;
 
 public class SopramonHibernate {
 
-	public static void main(String[] args) {
+	public static class PrincipalHibernate {
+
+		public static void main(String[] args) {
 //			printItems();
 //		printFournisseurs();
 //		printProduits();
 //		printProduitByClientId(2);
 //		printProduitByFournisseurId(1);
 
-//			DAOHibernate.close();
+    }
+
+			public static void printItems() {
+				IDAOItem daoItem = new DAOItemHibernate();
+				
+				for (Item i : IDAOItem.findAll()) {
+					System.out.println(i.getNom());
+				}
+			}
+		
+			
+			
+	}
 
 	}
 
-	public static void printItems() {
-		IDAOItem daoItem = new DAOItemHibernate();
-
-		for (Item i : daoItem.findAll()) {
-			System.out.println(i.getNom());
-		}
-	}
 }
