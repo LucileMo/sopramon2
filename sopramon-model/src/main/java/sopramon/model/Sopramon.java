@@ -43,6 +43,7 @@ private Capacite capacite;
 @OneToOne
 @JoinColumn(name ="SOPRA_SIGNE_ID")
 private Signe signe;
+@OneToMany(mappedBy="sopramon")
 private List<Achat> achats;
 @OneToMany(mappedBy="sopramon")
 private List<Combat> combats;

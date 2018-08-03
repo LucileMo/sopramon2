@@ -20,7 +20,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "combat")
 
-public class Combat {
+public class Combat implements ICombattant {
 
 	// CLE PRIMAIRE
 
@@ -60,9 +60,6 @@ public class Combat {
 	@OneToMany(mappedBy = "combat")
 	private List<Coup> coups;
 
-	private ICombattant joueur1;
-
-	private ICombattant joueur2;
 
 	public int getId() {
 		return id;
@@ -70,22 +67,6 @@ public class Combat {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public ICombattant getJoueur1() {
-		return joueur1;
-	}
-
-	public void setJoueur1(ICombattant joueur1) {
-		this.joueur1 = joueur1;
-	}
-
-	public ICombattant getJoueur2() {
-		return joueur2;
-	}
-
-	public void setJoueur2(ICombattant joueur2) {
-		this.joueur2 = joueur2;
 	}
 
 	public Date getDate() {
@@ -146,6 +127,11 @@ public class Combat {
 
 	public void duel() {
 
+	}
+
+	public void attaquer() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

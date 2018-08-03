@@ -28,9 +28,9 @@ public class Signe{
 	@Column(name = "SIG_TYPE_NOM", length = 45, nullable = false)
 	@NotEmpty
 	@Size(max = 45)
+	
 	private String typeNom;
-	private Signe faiblesse;
-	private Signe avantage;
+	
 	
 	public String getTypeNom() {
 		return typeNom;
@@ -58,18 +58,7 @@ public class Signe{
 	public void setType(Type type) {
 		this.type = type;
 	}
-	public Signe getFaiblesse() {
-		return faiblesse;
-	}
-	public void setFaiblesse(Signe faiblesse) {
-		this.faiblesse = faiblesse;
-	}
-	public Signe getAvantage() {
-		return avantage;
-	}
-	public void setAvantage(Signe avantage) {
-		this.avantage = avantage;
-	}
+
 	
 
 }

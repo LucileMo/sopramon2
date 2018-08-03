@@ -48,12 +48,12 @@ public class Boss implements ICombattant {
 	@OneToMany(mappedBy = "boss")
 	private List<Combat> combats;
 	
-
-	@Column(name = "BOSS_SIGNE", length = 45, nullable = false)
-	@NotEmpty
-	@Size(max = 50)
+	
+	//lien signe
+	@OneToOne
+	@JoinColumn(name = "BOSS_SIGNE_ID")
 	public Signe signe;
-
+	
 	public Signe getSigne() {
 		return signe;
 	}
