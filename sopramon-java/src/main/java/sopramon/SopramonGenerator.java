@@ -2,13 +2,14 @@ package sopramon;
 
 import java.util.Date;
 
-import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
+
 
 import sopramon.DAO.IDAOItem;
 import sopramon.DAO.IDAOSopramon;
 import sopramon.DAO.IDAOUtilisateur;
 import sopramon.DAO.Hibernate.DAOItemHibernate;
 import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
+import sopramon.model.Item;
 import sopramon.model.Utilisateur;
 
 
@@ -33,9 +34,9 @@ public class SopramonGenerator {
 		Item myItem = new Item();
 
 		myItem.setNom("");
-		myItem.setPrix("");
+		myItem.setPrix(null);
 		myItem.setCapacite("");
-		myItem.setStock("");
+		myItem.setStock(0);
 
 		daoItem.save(myItem);
 		
