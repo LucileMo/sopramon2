@@ -1,7 +1,6 @@
 package sopramon;
 
 import sopramon.DAO.IDAOItem;
-import sopramon.DAO.Hibernate.DAOHibernate;
 import sopramon.DAO.Hibernate.DAOItemHibernate;
 import sopramon.model.Item;
 
