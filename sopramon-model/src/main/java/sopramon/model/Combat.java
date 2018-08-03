@@ -50,7 +50,7 @@ public class Combat {
 	// CLE ETRANGERE
 	@ManyToOne
 	@JoinColumn(name = "COMBAT_SOPRAMON_ID")
-	private int sopramon;
+	private Sopramon sopramon;
 
 	// CLE ETRANGERE
 	@ManyToOne
@@ -120,15 +120,13 @@ public class Combat {
 		this.tours = tours;
 	}
 
-	public int getSopramon() {
+	public Sopramon getSopramon() {
 		return sopramon;
 	}
 
-	public void setSopramon(int sopramon) {
+	public void setSopramon(Sopramon sopramon) {
 		this.sopramon = sopramon;
 	}
-
-	
 
 	public Boss getBoss() {
 		return boss;
