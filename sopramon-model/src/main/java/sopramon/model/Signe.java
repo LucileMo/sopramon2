@@ -22,7 +22,7 @@ public class Signe{
 	@NotEmpty
 	@Size(max = 45)
 	private String nom;
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.ORDINAL)
 	@NotEmpty
 	private Type type;
 	@Column(name = "SIG_TYPE_NOM", length = 45, nullable = false)
