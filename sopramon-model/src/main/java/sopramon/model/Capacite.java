@@ -14,7 +14,7 @@ public class Capacite {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "CAPACITE_ID")
+	@Column(name = "CAPA_ID")
 	private int id;
 
 	@Column(name = "CAPA_pointsdevie", length = 45, nullable = false)

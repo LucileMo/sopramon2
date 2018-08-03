@@ -18,7 +18,7 @@ import javax.validation.constraints.Size;
 public class Item {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="ACH_ID")	
+@Column(name="ITEM_ID")	
 private int id;
 @Column(name="ITEM_NOM")
 @NotEmpty
