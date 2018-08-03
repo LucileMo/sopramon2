@@ -17,6 +17,7 @@ public class Utilisateur {
 
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "UTIL_ID")
 private int id;
 @Column(name="UTIL_NOM", length=15, nullable=false)
 @NotEmpty
