@@ -47,6 +47,7 @@ public class Boss implements ICombattant {
 	// CLE ETRANGERE
 	@OneToMany(mappedBy = "boss")
 	private List<Combat> combats;
+	
 
 	@Column(name = "BOSS_SIGNE", length = 45, nullable = false)
 	@NotEmpty
