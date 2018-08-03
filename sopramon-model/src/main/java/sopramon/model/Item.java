@@ -29,7 +29,7 @@ private String nom;
 private Double prix;
 @Column(name="ITEM_CAPACITE", nullable=false)
 private String capacite;
-@OneToMany(mappedBy="Item")
+@OneToMany(mappedBy="item")
 private List<Achat> achats;
 @Column(name="ITEM_STOCK")
 @PositiveOrZero
