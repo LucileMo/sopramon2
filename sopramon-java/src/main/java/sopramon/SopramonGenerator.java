@@ -15,34 +15,34 @@ import sopramon.model.Utilisateur;
 
 public class SopramonGenerator {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		// Ajout d'un Utilisateur/Sopramon
-		IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate();
-		Utilisateur myUtilisateur = new Utilisateur();
+        // Ajout d'un Utilisateur/Sopramon
+        IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate();
+        Utilisateur myUtilisateur = new Utilisateur();
 
-		myUtilisateur.setNom("");
-		myUtilisateur.setPrenom("");
-		myUtilisateur.setUsername("");
-		myUtilisateur.setPassword("");
+        myUtilisateur.setNom("");
+        myUtilisateur.setPrenom("");
+        myUtilisateur.setUsername("");
+        myUtilisateur.setPassword("");
 
-		daoUtilisateur.save(myUtilisateur);
-		
+        daoUtilisateur.save(myUtilisateur);
+        
 
-		// Ajout d'un Item
-		IDAOItem daoItem = new DAOItemHibernate();
-		Item myItem = new Item();
+        // Ajout d'un Item
+        IDAOItem daoItem = new DAOItemHibernate();
+        Item myItem = new Item();
 
 		myItem.setNom("");
-		myItem.setPrix(null);
+		myItem.setPrix("");
 		myItem.setCapacite("");
-		myItem.setStock(0);
+		myItem.setStock("");
 
-		daoItem.save(myItem);
-		
-		
-		
-		
-	}
+        daoItem.save(myItem);
+        
+        
+        
+        
+    }
 
 }
