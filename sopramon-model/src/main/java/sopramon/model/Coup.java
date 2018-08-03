@@ -43,12 +43,12 @@ public class Coup {
 	// CLE ETRANGERE
 	@ManyToOne
 	@JoinColumn(name = "COUP_SOPRAMON_ID")
-	private int sopramonid;
+	private Sopramon sopramonid;
 
 	// CLE ETRANGERE
 	@ManyToOne
 	@JoinColumn(name = "COUP_COMBAT_ID")
-	private int combat;
+	private Combat combat;
 	
 
 	public void setDate(Date date) {
@@ -61,6 +61,42 @@ public class Coup {
 
 	public void setDegats(int degats) {
 		this.degats = degats;
+	}
+
+	public int getCoupid() {
+		return coupid;
+	}
+
+	public void setCoupid(int coupid) {
+		this.coupid = coupid;
+	}
+
+	public int getPeristance() {
+		return peristance;
+	}
+
+	public void setPeristance(int peristance) {
+		this.peristance = peristance;
+	}
+
+	public Sopramon getSopramonid() {
+		return sopramonid;
+	}
+
+	public void setSopramonid(Sopramon sopramonid) {
+		this.sopramonid = sopramonid;
+	}
+
+	public Combat getCombat() {
+		return combat;
+	}
+
+	public void setCombat(Combat combat) {
+		this.combat = combat;
+	}
+
+	public Date getDate() {
+		return date;
 	}
 
 }
