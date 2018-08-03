@@ -26,7 +26,13 @@ private int id;
 private String nom;
 @Column(name="ITEM_PRIX", nullable=false)
 @Positive
-private Double prix;
+private int prix;
+public int getPrix() {
+	return prix;
+}
+public void setPrix(int prix) {
+	this.prix = prix;
+}
 @Column(name="ITEM_CAPACITE", nullable=false)
 private String capacite;
 @OneToMany(mappedBy="item")
@@ -61,12 +67,7 @@ public String getNom() {
 public void setNom(String nom) {
 	this.nom = nom;
 }
-public Double getPrix() {
-	return prix;
-}
-public void setPrix(Double prix) {
-	this.prix = prix;
-}
+
 public String getCapacite() {
 	return capacite;
 }

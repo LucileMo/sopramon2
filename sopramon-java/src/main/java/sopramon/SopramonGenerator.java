@@ -18,7 +18,7 @@ public class SopramonGenerator {
     public static void main(String[] args) {
 
         // Ajout d'un Utilisateur/Sopramon
-        IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate();
+      /* daoUtilisateur = new DAOUtilisateurHibernate();
         Utilisateur myUtilisateur = new Utilisateur();
 
         myUtilisateur.setNom("");
@@ -26,17 +26,17 @@ public class SopramonGenerator {
         myUtilisateur.setUsername("");
         myUtilisateur.setPassword("");
 
-        daoUtilisateur.save(myUtilisateur);
+        daoUtilisateur.save(myUtilisateur);*/
         
 
         // Ajout d'un Item
         IDAOItem daoItem = new DAOItemHibernate();
         Item myItem = new Item();
 
-		myItem.setNom("");
-		myItem.setPrix("");
-		myItem.setCapacite("");
-		myItem.setStock("");
+		myItem.setNom("Arc");
+		myItem.setPrix(54);
+		myItem.setCapacite("Tire des fleches");
+		myItem.setStock(58);
 
         daoItem.save(myItem);
         
