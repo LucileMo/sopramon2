@@ -155,7 +155,7 @@ public class Principal {
 			
 			Combat nouveauCombat = new Combat();
 			
-			nouveauCombat.setSopramon(s);
+			//nouveauCombat.setSopramon(s);
 			nouveauCombat.setDate(date);
 		
 			daoCombat.save(nouveauCombat);
