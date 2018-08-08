@@ -26,6 +26,7 @@ public class SopramonHibernate {
 			daosopramon.findByIdBetween(0, 5);
 			
 			
+			
 //		daoproduit.findUnProduit("Planche");
 			
 			//	daoproduit.findByNom("planche"); 
