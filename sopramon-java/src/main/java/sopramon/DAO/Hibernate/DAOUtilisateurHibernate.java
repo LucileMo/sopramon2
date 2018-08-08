@@ -5,6 +5,7 @@ import java.util.List;
 import sopramon.DAO.IDAOItem;
 import sopramon.DAO.IDAOUtilisateur;
 import sopramon.model.Item;
+import sopramon.model.Sopramon;
 import sopramon.model.Utilisateur;
 
 
@@ -64,4 +65,12 @@ public class DAOUtilisateurHibernate extends DAOHibernate implements IDAOUtilisa
 	
 	
 	
-}}
+}
+	
+}
+
+
+
+
+
+

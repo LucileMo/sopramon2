@@ -252,6 +252,12 @@ public class DAOSopramonSQL extends DAOSQL implements IDAOSopramon {
 			}
 	}
 
+
+	public Sopramon findByUtilisateur(String username, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 }
