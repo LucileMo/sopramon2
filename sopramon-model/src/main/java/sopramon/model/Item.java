@@ -39,15 +39,14 @@ private String capacite;
 private List<Achat> achats;
 @Column(name="ITEM_STOCK")
 @PositiveOrZero
-private int Stock;
 
-
+private int stock;
 
 public int getStock() {
-	return Stock;
+	return stock;
 }
 public void setStock(int stock) {
-	Stock = stock;
+	this.stock = stock;
 }
 public List<Achat> getAchats() {
 	return achats;
