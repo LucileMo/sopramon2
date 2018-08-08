@@ -27,4 +27,6 @@ public interface IDAOUtilisateur extends IDAO<Utilisateur>{
 
 	public int countByNomContaining(String nom);
 
+	public Utilisateur findByUsernameandPassword (String username, String password);
+	
 }

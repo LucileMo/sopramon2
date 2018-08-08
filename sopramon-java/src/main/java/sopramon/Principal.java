@@ -39,7 +39,7 @@ public class Principal {
 		}
 	}
 
-	public static void findByUtilisateur() {
+	public void findByUsernameandPassword() {
 //      IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate(); 
 //      IDAOSopramon daoSopramon = new DAOSopramonHibernate();
 
@@ -47,7 +47,8 @@ public class Principal {
 		String u = lireChaine();
 		System.out.println("Password : ");
 		String p = lireChaine();
-		Sopramon s = daoutilisateur.findByUtilisateur(u, p);
+		Utilisateur utilsateur = daoutilisateur.findByUsernameandPassword(u, p);
+		private String s = sopramon;
 		System.out.println("Sopramon : " + s.getPseudo());
 
 	}
@@ -130,12 +131,12 @@ public class Principal {
 						SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 						Date date = formatter.parse(d);
 
-					//	Utilisateur nouveauUtilisateur = new Utilisateur();
+						Utilisateur nouveauUtilisateur = new Utilisateur();
 
-						daoutilisateur.setNom(a);
-						daoutilisateur.setPrenom(b);
-						daoutilisateur.setUsername(c);
-						daoutilisateur.setPassword(g);
+						nouveauUtilisateur.setNom(a);
+						nouveauUtilisateur.setPrenom(b);
+						nouveauUtilisateur.setUsername(c);
+						nouveauUtilisateur.setPassword(g);
 
 						daoutilisateur.save(nouveauUtilisateur);
 
@@ -190,7 +191,7 @@ public class Principal {
 
 					try {
 
-						findByUtilisateur();
+						findByUsernameandPassword();
 					}
 
 					catch (Exception e) {
