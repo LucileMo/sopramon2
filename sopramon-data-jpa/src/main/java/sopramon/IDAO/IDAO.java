@@ -1,4 +1,4 @@
-package sopramon.DAO;
+package sopramon.IDAO;
 
 import java.util.List;
 public interface IDAO <T> {

@@ -3,10 +3,6 @@ package sopramon;
 import java.util.Date;
 import java.util.Scanner;
 
-import DAOSQL.DAOCombatSQL;
-import DAOSQL.DAOSopramonSQL;
-import DAOSQL.DAOUtilisateurSQL;
-
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -15,12 +11,13 @@ import sopramon.model.Combat;
 import sopramon.model.Sopramon;
 import sopramon.model.Utilisateur;
 import sopramon.DAO.IDAOSopramon;
-import sopramon.DAO.Hibernate.DAOSopramonHibernate;
-import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
 import sopramon.IDAO.IDAOCombat;
 import sopramon.IDAO.IDAOUtilisateur;
 
 public class Principal {
+	
+	
+	
 	
 	static int lireEntier() {
 		
@@ -61,8 +58,12 @@ public class Principal {
 	}
 	
 	
+	
 
-	public static void main(String[] args) {
+	public void run(String[] args) {
+		{
+	
+		
 		int m = 0;
 		while (m<1 || m>3) {
 		System.out.println("....................");
@@ -94,6 +95,11 @@ public class Principal {
 			System.out.println(p.getCapacite().getPointsDeVie() + " points de vie.");
 			System.out.println("Signe : "+ p.getSigne().getNom() + " Type : " + p.getSigne().getTypeNom());
 			System.out.println("-----------------------------");
+		
+		/*	 private IDAOSopramon daosopramon;
+			  	daosopramon.findAll();    */
+		
+		
 		}
 		
 		break;
@@ -209,5 +215,10 @@ case 4 : System.out.println("Connexion");
 	}
 
 	}
+
+
+
+	  
+}
 
 

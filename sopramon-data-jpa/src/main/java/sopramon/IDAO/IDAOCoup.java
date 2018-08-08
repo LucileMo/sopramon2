@@ -1,7 +1,7 @@
-package sopramon.DAO;
+package sopramon.IDAO;
 
+import sopramon.IDAO.IDAO;
 import sopramon.model.Coup;
-import sopramon.DAO.IDAO;
 
 public interface IDAOCoup extends IDAO<Coup>{
 

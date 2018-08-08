@@ -3,7 +3,7 @@ package sopramon.spring;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import config.AppConfig;
-import fr.formation.Principal;
+import sopramon.Principal;
 
 public class SpringApplication {
 

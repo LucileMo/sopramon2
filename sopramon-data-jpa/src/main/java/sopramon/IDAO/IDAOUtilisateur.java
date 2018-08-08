@@ -1,7 +1,7 @@
-package sopramon.DAO;
+package sopramon.IDAO;
 
+import sopramon.IDAO.IDAO;
 import sopramon.model.Utilisateur;
-import sopramon.DAO.IDAO;
 
 public interface IDAOUtilisateur extends IDAO<Utilisateur>{
 
