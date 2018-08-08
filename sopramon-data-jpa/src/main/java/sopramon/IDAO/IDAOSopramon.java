@@ -14,13 +14,13 @@ import sopramon.model.Sopramon;
 		@Query("select p from Produit p where p.nom = :Planche")
 		public Sopramon findUnProduit(@Param("Planche") String libelle);
 		
-		public List<Sopramon> findByPrixBetween(double prix1, double prix2);
+	//	public List<Sopramon> findByPrixBetween(double prix1, double prix2);
 		
 		public Sopramon save (Sopramon entity);
 		
 		public List<Sopramon> findByNom(String libelle);
 		
-		public List<Sopramon> findByPrix(String libelle);
+		//public List<Sopramon> findByPrix(String libelle);
 
 		public Sopramon findFirstByNom(String libelle);
 
