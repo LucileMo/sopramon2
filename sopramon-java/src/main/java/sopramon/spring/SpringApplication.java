@@ -17,11 +17,11 @@ public class SpringApplication {
 		AnnotationConfigApplicationContext myContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		
 			myContext.getBeanFactory()
-			.createBean(SopramonHibernate.class)
+			.createBean(SopramonGenerator.class)
 			.run(args);
 			
 			myContext.close();
-				
+
 	}
 
 }

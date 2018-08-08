@@ -42,7 +42,7 @@ public class SopramonGenerator {
 
 	//	D DELETE ITEM BY ID
 
-	//	daoitem.deleteById(10);
+//		daoitem.deleteById(13);
 
 	}
 

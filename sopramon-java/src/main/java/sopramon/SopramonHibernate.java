@@ -33,11 +33,12 @@ public class SopramonHibernate {
 
 		// R READ ITEM
 
-		Item myItem = new Item();
 
+		
+		
 		daoitem.findByNomContaining("Hache");
 
-	//	daoitem.findAll();
+		daoitem.findAll();
 
 		// U UPDATE ITEM
 
@@ -45,6 +46,7 @@ public class SopramonHibernate {
 	}
 
 }
+//		Item myItem = new Item();
 //		daoproduit.findUnProduit("Planche");
 //		daoproduit.findByNom("planche"); 
 //
