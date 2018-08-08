@@ -2,7 +2,7 @@ package sopramon;
 import java.util.Date;
 import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
-import fr.formation.IDAO.IDAOProduit;
+
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -61,7 +61,7 @@ public class Principal {
     
     @Autowired  
     
-    private IDAOProduit daoproduit;
+  private IDAOProduit daoproduit;
     
     
     
