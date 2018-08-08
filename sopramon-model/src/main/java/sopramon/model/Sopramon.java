@@ -27,7 +27,7 @@ public class Sopramon extends Utilisateur implements ICombattant {
 @NotEmpty
 @Size(max = 45)
 private String pseudo;
-@Column(name="SOPRA_DATE")
+@Column(name="SOPRA_DATE_NAISSANCE")
 @Temporal(TemporalType.TIMESTAMP)
 private java.util.Date Date;
 private Date dateNaissance;
