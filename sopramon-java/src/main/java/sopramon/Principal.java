@@ -75,7 +75,7 @@ public class Principal {
         Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
         s.getPseudo();
  		
- 		boolean ok = true;
+ 		
 	
  		
  		if(s != null) {
@@ -167,7 +167,7 @@ public class Principal {
 	
 			
 	
-	else {
+ 		 {
 		System.out.println("Mauvaise saisie ou compte inexistant. ");
 		System.out.println("Creer un compte");
 
