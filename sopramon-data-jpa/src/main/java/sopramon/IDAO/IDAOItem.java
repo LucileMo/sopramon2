@@ -28,12 +28,13 @@ public interface IDAOItem extends JpaRepository<Item, Integer> {
 
 	public Item findById(int id);
 
+	public Item findUnItem(@Param("Hache") String libelle);
+
 	// U UPDATE
-	
-	
+
 	@Query("update i from Item s where s.id = :1, ")
-	Stream<Item> updateAnItem();
-	
+	Stream<Item> updateAnItem(int String);
+
 	// D DELETE
 
 	public Item deleteById(int itemid);
