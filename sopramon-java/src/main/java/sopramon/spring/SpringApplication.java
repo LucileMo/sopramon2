@@ -4,6 +4,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import config.AppConfig;
 import sopramon.Principal;
+import sopramon.SopramonHibernate;
+import sopramon.SopramonGenerator;
 
 public class SpringApplication {
 
@@ -15,11 +17,11 @@ public class SpringApplication {
 		AnnotationConfigApplicationContext myContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		
 			myContext.getBeanFactory()
-			.createBean(sopramon.Principal.class)
+			.createBean(Principal.class)
 			.run(args);
 			
 			myContext.close();
-
+				
 	}
 
 }

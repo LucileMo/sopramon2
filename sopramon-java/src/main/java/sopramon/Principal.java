@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import sopramon.model.Combat;
 import sopramon.model.Sopramon;
 import sopramon.model.Utilisateur;
-import sopramon.DAO.IDAOSopramon;
+import sopramon.IDAO.IDAOSopramon;
 import sopramon.IDAO.IDAOCombat;
 import sopramon.IDAO.IDAOUtilisateur;
 
