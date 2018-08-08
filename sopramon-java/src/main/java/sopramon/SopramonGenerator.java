@@ -24,6 +24,7 @@ public class SopramonGenerator {
 
 		    @Autowired
 			private IDAOSopramon daosopramon;
+		    
 	        @Autowired
 			private IDAOUtilisateur daoutilisateur;
 	        @Autowired

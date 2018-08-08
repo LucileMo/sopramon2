@@ -20,6 +20,7 @@ public class SopramonHibernate {
 	 @Autowired
 		private IDAOSopramon daosopramon;
      @Autowired
+     
 		private IDAOUtilisateur daoutilisateur;
      @Autowired
 		private IDAOCombat daocombat;
