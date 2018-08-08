@@ -35,7 +35,7 @@ public class SopramonGenerator {
 
 		myItem.setNom("Le DESTRUCTOR");
 		myItem.setPrix(400);
-		myItem.setCapacite("10");
+		myItem.setCapacite("12");
 		myItem.setStock(500);
 
 		daoitem.save(myItem);

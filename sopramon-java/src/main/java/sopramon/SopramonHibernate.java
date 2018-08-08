@@ -16,8 +16,6 @@ import sopramon.model.Item;
 import sopramon.model.Sopramon;
 import sopramon.model.Utilisateur;
 
-
-
 public class SopramonHibernate {
 
 	@Autowired
@@ -28,48 +26,40 @@ public class SopramonHibernate {
 	@Autowired
 	private IDAOCombat daocombat;
 
-	@Autowired 
-	IDAOItem daoitem;	
-	
+	@Autowired
+	IDAOItem daoitem;
+
 	public void run(String[] args) {
 
 		// R READ ITEM
-		
-			Item myItem = new Item();
 
-			daoitem.findUnItem("Hache");
+		Item myItem = new Item();
 
-			daoitem.findAll();
-			
-			// U UPDATE ITEM
-			
-			daoitem.updateAnItem(1);
-	}		
-	
-	
+		daoitem.findByNomContaining("Hache");
+
+	//	daoitem.findAll();
+
+		// U UPDATE ITEM
+
+	//	daoitem.updateAnItem(1);
+	}
+
 }
 //		daoproduit.findUnProduit("Planche");
 //		daoproduit.findByNom("planche"); 
 //
 //		
 
+// U UPDATE
 
-	// U UPDATE
+// @Query("update i from Item s where s.id = :1, ")
+// Stream<Item> updateAnItem();
 
-	//		@Query("update i from Item s where s.id = :1, ")
-	//		Stream<Item> updateAnItem();
+// D DELETE
 
-	// D DELETE
-
-	//		public Item deleteById(int itemid);
-
-
-
+// public Item deleteById(int itemid);
 
 //
-
-
-
 
 /*
  * 

@@ -15,28 +15,37 @@ import sopramon.model.Utilisateur;
 
 public interface IDAOItem extends JpaRepository<Item, Integer> {
 
+	public List <Item> findByNomContaining(String string);
+	
+	
+	
+	
+	
+	
+	
 	// public Utilisateur findByUsernameAndPassword (String username, String
 	// password);
 
 	// C CREATE
 
-	public Item save(Item entity);
+//	public Item save(Item entity);
 
 	// R READ
 
-	public List<Item> findAll();
+//	public List<Item> findAll();
 
-	public Item findById(int id);
-
-	public Item findUnItem(@Param("Hache") String libelle);
+//	public Item findById(int id);
+	
+//	@Query
+//	public Item findUnItem(@Param("Hache") String libelle);
 
 	// U UPDATE
 
-	@Query("update i from Item s where s.id = :1, ")
-	Stream<Item> updateAnItem(int String);
+	//@Query("update i from Item s where s.id = :1, ")
+	//Stream<Item> updateAnItem(int String);
 
 	// D DELETE
 
-	public Item deleteById(int itemid);
+	// public Item deleteById(int itemid);
 
 }
