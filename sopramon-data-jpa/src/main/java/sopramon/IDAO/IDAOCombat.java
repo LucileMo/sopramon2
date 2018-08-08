@@ -30,3 +30,4 @@ public interface IDAOCombat extends JpaRepository<Combat, Integer> {
 	public int countByIdContaining(int combatid);
 
 }
+
