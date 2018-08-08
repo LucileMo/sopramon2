@@ -14,11 +14,11 @@ import java.text.SimpleDateFormat;
 import sopramon.model.Combat;
 import sopramon.model.Sopramon;
 import sopramon.model.Utilisateur;
-import sopramon.DAO.IDAOCombat;
 import sopramon.DAO.IDAOSopramon;
-import sopramon.DAO.IDAOUtilisateur;
 import sopramon.DAO.Hibernate.DAOSopramonHibernate;
 import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
+import sopramon.IDAO.IDAOCombat;
+import sopramon.IDAO.IDAOUtilisateur;
 
 public class Principal {
 	

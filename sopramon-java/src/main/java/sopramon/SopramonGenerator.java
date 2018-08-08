@@ -2,13 +2,11 @@ package sopramon;
 
 import java.util.Date;
 
-
-
-import sopramon.DAO.IDAOItem;
 import sopramon.DAO.IDAOSopramon;
-import sopramon.DAO.IDAOUtilisateur;
 import sopramon.DAO.Hibernate.DAOItemHibernate;
 import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
+import sopramon.IDAO.IDAOItem;
+import sopramon.IDAO.IDAOUtilisateur;
 import sopramon.model.Item;
 import sopramon.model.Utilisateur;
 
