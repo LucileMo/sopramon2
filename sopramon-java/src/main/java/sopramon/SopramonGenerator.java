@@ -2,10 +2,9 @@ package sopramon;
 
 import java.util.Date;
 
-<<<<<<< Updated upstream
+
 import org.springframework.beans.factory.annotation.Autowired;
-=======
->>>>>>> Stashed changes
+
 
 import sopramon.IDAO.IDAOItem;
 import sopramon.IDAO.IDAOSopramon;
@@ -17,18 +16,18 @@ import sopramon.model.Utilisateur;
 
 
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 public class SopramonGenerator {
 	
 
 
-<<<<<<< Updated upstream
-		@Autowired
-			
+
+		    @Autowired
 			private IDAOSopramon daosopramon;
+	        @Autowired
+			private IDAOUtilisateur daoutilisateur;
+	        @Autowired
+			private IDAOCombat daocombat;
 			
 			public void run (String[] args) {
 
@@ -36,10 +35,8 @@ public class SopramonGenerator {
 			}	
 				
     	
-    	
-=======
-    public static void(String[] args) {
->>>>>>> Stashed changes
+  
+
 
         // Ajout d'un Utilisateur/Sopramon
       /* daoUtilisateur = new DAOUtilisateurHibernate();

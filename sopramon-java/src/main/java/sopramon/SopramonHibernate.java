@@ -5,6 +5,7 @@ import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import sopramon.IDAO.IDAOSopramon;
+import sopramon.IDAO.IDAOCombat;
 import sopramon.IDAO.IDAOItem;
 import sopramon.IDAO.IDAOUtilisateur;
 import sopramon.model.Item;
@@ -16,9 +17,13 @@ import sopramon.model.Utilisateur;
 public class SopramonHibernate {
 
 		
-		@Autowired
-		
+	 @Autowired
 		private IDAOSopramon daosopramon;
+     @Autowired
+		private IDAOUtilisateur daoutilisateur;
+     @Autowired
+		private IDAOCombat daocombat;
+		
 		
 		public void run (String[] args) {
 
