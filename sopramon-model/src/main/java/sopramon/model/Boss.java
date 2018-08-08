@@ -51,7 +51,7 @@ public class Boss implements ICombattant {
 	
 	//lien signe
 	@OneToOne
-	@JoinColumn(name = "BOSS_SIGNE_ID")
+	@JoinColumn(name = "BOSS_SIGNE")
 	public Signe signe;
 	
 	public Signe getSigne() {

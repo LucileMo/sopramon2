@@ -30,6 +30,7 @@ public class Combat implements ICombattant {
 	private int id;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="COMB_DATE")
 	private Date date;
 
 	@Column(name = "COMB_ARENE", length = 45, nullable = false)
@@ -49,12 +50,12 @@ public class Combat implements ICombattant {
 
 	// CLE ETRANGERE
 	@ManyToOne
-	@JoinColumn(name = "COMBAT_SOPRAMON_ID")
+	@JoinColumn(name = "COMB_SOPRAMON_ID")
 	private Sopramon sopramon;
 
 	// CLE ETRANGERE
 	@ManyToOne
-	@JoinColumn(name = "COMBAT_BOSS_ID")
+	@JoinColumn(name = "COMB_BOSS_ID")
 	private Boss boss;
 	
 	@OneToMany(mappedBy = "combat")

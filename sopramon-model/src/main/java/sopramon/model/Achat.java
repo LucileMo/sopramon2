@@ -23,7 +23,6 @@ public class Achat {
 	private int id;
 	@Column(name="ACH_DATE")
 	@Temporal(TemporalType.TIMESTAMP)
-	private java.util.Date Date;
 	private Date date;
 	@Column(name="ACH_PRIX", nullable=false)
 	@Positive
