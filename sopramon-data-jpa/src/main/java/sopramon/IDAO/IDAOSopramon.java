@@ -11,14 +11,14 @@ import sopramon.model.Sopramon;
 	
 	public interface IDAOSopramon extends JpaRepository<Sopramon, Integer> {
 		
-		@Query("select p from Produit p where p.nom = :Planche")
-		public Sopramon findUnProduit(@Param("Planche") String libelle);
+		@Query("select s from Sopramon s where s.pseudo = :Caprilu")
+		public Sopramon findUnSopramon(@Param("Caprilu") String pseudo);
 		
 	//	public List<Sopramon> findByPrixBetween(double prix1, double prix2);
 		
 		public Sopramon save (Sopramon entity);
 		
-		public List<Sopramon> findByNom(String libelle);
+		public List<Sopramon> findByPseudo(String libelle);
 		
 		//public List<Sopramon> findByPrix(String libelle);
 
