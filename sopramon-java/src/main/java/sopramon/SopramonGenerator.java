@@ -23,6 +23,7 @@ public class SopramonGenerator {
 	@Autowired
 	private IDAOUtilisateur daoutilisateur;
 
+	
 	@Autowired
 	private IDAOCombat daocombat;
 
@@ -39,9 +40,9 @@ public class SopramonGenerator {
 
 		daoitem.save(myItem);
 
-		// D DELETE ITEM BY ID
+	//	D DELETE ITEM BY ID
 
-		daoitem.deleteById(10);
+	//	daoitem.deleteById(10);
 
 	}
 
