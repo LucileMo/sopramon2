@@ -28,7 +28,7 @@ public interface IDAOItem extends JpaRepository<Item, Integer> {
 
 	// C CREATE
 
-//	public Item save(Item entity);
+	public Item save(Item entity);
 
 	// R READ
 
@@ -46,6 +46,6 @@ public interface IDAOItem extends JpaRepository<Item, Integer> {
 
 	// D DELETE
 
-	// public Item deleteById(int itemid);
+	public Item deleteById(int itemid);
 
 }

@@ -15,5 +15,11 @@ public interface IDAOUtilisateur extends JpaRepository<Utilisateur, Integer>{
 
 	public Utilisateur findByUsernameAndPassword (String username, String password);
 	
-
+	
+<<<<<<< HEAD
+=======
+	
+	
+	
+>>>>>>> master
 }

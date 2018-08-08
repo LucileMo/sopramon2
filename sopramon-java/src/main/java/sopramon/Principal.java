@@ -39,7 +39,7 @@ public class Principal {
 		}
 	}
 
-	public void findByUsernameAndPassword() {
+	/*public void findByUsernameAndPassword() {
 //      IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate(); 
 //      IDAOSopramon daoSopramon = new DAOSopramonHibernate();
 
@@ -50,7 +50,7 @@ public class Principal {
         Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
         System.out.println("Sopramon : " + s.getPseudo());
 
-    }
+    }*/
 	
 
 	
@@ -75,7 +75,7 @@ public class Principal {
         System.out.println("Password : ");
         String p = lireChaine();
         Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
-        
+        s.getPseudo();
  		
  		boolean ok = true;
  		
@@ -88,7 +88,7 @@ public class Principal {
 			
 			
 			int m = 0;
-			while (m < 1 || m > 4) {
+			while (m < 1 || m > 2) {
 				System.out.println("....................");
 				System.out.println("........menu........");
 				System.out.println("....................");
