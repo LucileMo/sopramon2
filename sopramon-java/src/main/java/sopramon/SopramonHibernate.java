@@ -46,7 +46,7 @@ public class SopramonHibernate {
 		System.out.println("Password : ");	
 		 String p =lireChaine();
 		 Sopramon s = daoSopramon.findByUtilisateur(u, p);
-		 System.out.println("Sopramon : " + s.getNom());
+		 System.out.println("Sopramon : " + s.getPseudo());
 		
 	}
 	

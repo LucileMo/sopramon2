@@ -23,10 +23,10 @@ import javax.validation.constraints.Size;
 public class Sopramon extends Utilisateur implements ICombattant {
 	
 
-@Column(name = "SOPRA_NOM", length = 45, nullable = false)
+@Column(name = "SOPRA_PSEUDO", length = 45, nullable = false)
 @NotEmpty
 @Size(max = 45)
-private String nom;
+private String pseudo;
 @Column(name="SOPRA_DATE")
 @Temporal(TemporalType.TIMESTAMP)
 private java.util.Date Date;
@@ -55,14 +55,15 @@ private List<Combat> combats;
 
 
 
+public String getPseudo() {
+	return pseudo;
+}
+public void setPseudo(String pseudo) {
+	this.pseudo = pseudo;
+}
 
 
-public String getNom() {
-	return nom;
-}
-public void setNom(String nom) {
-	this.nom = nom;
-}
+
 
 public Capacite getCapacite() {
 	return capacite;

@@ -17,6 +17,8 @@ import sopramon.model.Utilisateur;
 import sopramon.DAO.IDAOCombat;
 import sopramon.DAO.IDAOSopramon;
 import sopramon.DAO.IDAOUtilisateur;
+import sopramon.DAO.Hibernate.DAOSopramonHibernate;
+import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
 
 public class Principal {
 	
@@ -46,6 +48,18 @@ public class Principal {
 		}
 	}
 	
+	public static void findByUtilisateur() {
+		IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate();	
+		IDAOSopramon daoSopramon = new DAOSopramonHibernate();
+		System.out.println("Username : ");
+		String u =lireChaine();
+		System.out.println("Password : ");	
+		 String p =lireChaine();
+		 Sopramon s = daoSopramon.findByUtilisateur(u, p);
+		 System.out.println("Sopramon : " + s.getPseudo());
+		
+	}
+	
 	
 
 	public static void main(String[] args) {
@@ -60,7 +74,9 @@ public class Principal {
 		System.out.println("2 : Creer un compte");
 	
 		System.out.println("3 : Affronter le Boss");
-		;
+		
+		System.out.println("4 : Connexion");
+		
 		System.out.println("Saisir un mode : ");
 		
 		m = lireEntier();
@@ -163,6 +179,23 @@ public class Principal {
 		
 		catch (Exception e) {
 			e.printStackTrace();
+		}
+		break;
+		
+case 4 : System.out.println("Connexion");
+		
+		
+		
+		
+		try {
+			
+			findByUtilisateur();
+		}
+		
+		catch (Exception e) {
+			e.printStackTrace();
+			System.err.println("Un problème est survenu... Désolé !");
+			
 		}
 		break;
 		
