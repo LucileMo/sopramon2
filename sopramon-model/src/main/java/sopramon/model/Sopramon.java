@@ -14,14 +14,19 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Size;
 
 @Entity
 @PrimaryKeyJoinColumn(name="SOPRA_ID", referencedColumnName="UTIL_ID")
 public class Sopramon extends Utilisateur implements ICombattant {
 	
 
-
+@Column(name = "SOPRA_NOM", length = 45, nullable = false)
+@NotEmpty
+@Size(max = 45)
+private String nom;
 @Column(name="SOPRA_DATE")
 @Temporal(TemporalType.TIMESTAMP)
 private java.util.Date Date;
@@ -52,7 +57,12 @@ private List<Combat> combats;
 
 
 
-
+public String getNom() {
+	return nom;
+}
+public void setNom(String nom) {
+	this.nom = nom;
+}
 
 public Capacite getCapacite() {
 	return capacite;

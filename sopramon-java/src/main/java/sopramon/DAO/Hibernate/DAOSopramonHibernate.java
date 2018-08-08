@@ -11,12 +11,13 @@ import javax.persistence.Persistence;
 
 import sopramon.DAO.IDAOSopramon;
 import sopramon.model.Sopramon;
+import sopramon.model.Utilisateur;
 
 
 public class DAOSopramonHibernate extends DAOHibernate implements IDAOSopramon {
 	
 
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PersistenceUnit");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("NomPersistenceUnit");
 		EntityManager em = emf.createEntityManager();
 
 		EntityTransaction tx;
@@ -69,10 +70,20 @@ public class DAOSopramonHibernate extends DAOHibernate implements IDAOSopramon {
 		}
 	*/
 		
-	}
-	
-	
 
+public Sopramon findByUtilisateur(String username, String password) {
+	
+	
+	return em
+			.createQuery("select s from Sopramon s where s.username = :username and s.password = :password", Sopramon.class)
+			.setParameter("username", username )
+			.setParameter("password", password )
+			.getSingleResult();
+
+}
+
+	
+}
 
 
 
