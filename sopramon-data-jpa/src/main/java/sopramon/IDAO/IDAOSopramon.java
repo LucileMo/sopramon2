@@ -14,7 +14,7 @@ import sopramon.model.Sopramon;
 		@Query("select s from Sopramon s where s.pseudo = :Caprilu")
 		public Sopramon findUnSopramon(@Param("Caprilu") String pseudo);
 		
-	//	public List<Sopramon> findByPrixBetween(double prix1, double prix2);
+		public List<Sopramon> findByIdBetween(int id1, int id2);
 		
 		public Sopramon save (Sopramon entity);
 		

@@ -2,18 +2,31 @@ package sopramon;
 
 import java.util.Date;
 
-import sopramon.DAO.IDAOSopramon;
-import sopramon.DAO.Hibernate.DAOItemHibernate;
-import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import sopramon.IDAO.IDAOItem;
+import sopramon.IDAO.IDAOSopramon;
+import sopramon.IDAO.IDAOCombat;
+import sopramon.IDAO.IDAO;
 import sopramon.IDAO.IDAOUtilisateur;
 import sopramon.model.Item;
 import sopramon.model.Utilisateur;
 
 
+
 public class SopramonGenerator {
 
-    public static void main(String[] args) {
+		@Autowired
+			
+			private IDAOSopramon daosopramon;
+			
+			public void run (String[] args) {
+
+				daosopramon.findUnSopramon("planche"); 
+			}	
+				
+    	
+    	
 
         // Ajout d'un Utilisateur/Sopramon
       /* daoUtilisateur = new DAOUtilisateurHibernate();
@@ -28,7 +41,7 @@ public class SopramonGenerator {
         
 
         // Ajout d'un Item
-        IDAOItem daoItem = new DAOItemHibernate();
+  /*      IDAOItem daoItem = new DAOItemHibernate();
         Item myItem = new Item();
 
 		myItem.setNom("Arc");
@@ -39,8 +52,6 @@ public class SopramonGenerator {
         daoItem.save(myItem);
         
         
-        
+    */    
         
     }
-
-}

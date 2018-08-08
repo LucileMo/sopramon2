@@ -2,10 +2,9 @@ package sopramon;
 
 import java.util.Scanner;
 
-import sopramon.DAO.IDAOSopramon;
-import sopramon.DAO.Hibernate.DAOItemHibernate;
-import sopramon.DAO.Hibernate.DAOSopramonHibernate;
-import sopramon.DAO.Hibernate.DAOUtilisateurHibernate;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import sopramon.IDAO.IDAOSopramon;
 import sopramon.IDAO.IDAOItem;
 import sopramon.IDAO.IDAOUtilisateur;
 import sopramon.model.Item;
@@ -15,6 +14,33 @@ import sopramon.model.Utilisateur;
 
 
 public class SopramonHibernate {
+
+		
+		@Autowired
+		
+		private IDAOSopramon daosopramon;
+		
+		public void run (String[] args) {
+
+		
+			daosopramon.findByIdBetween(0, 5);
+			
+			
+//		daoproduit.findUnProduit("Planche");
+			
+			//	daoproduit.findByNom("planche"); 
+		}	
+				
+			
+		}
+	
+	
+	
+	
+	
+	
+	/*
+	
 	
 	static String lireChaine() {
 		Scanner myScanner = new Scanner(System.in);
@@ -69,6 +95,6 @@ public class SopramonHibernate {
 			
 
 	
-		
+		*/
 
 
