@@ -17,7 +17,7 @@ public class SpringApplication {
 		AnnotationConfigApplicationContext myContext = new AnnotationConfigApplicationContext(AppConfig.class);
 		
 			myContext.getBeanFactory()
-			.createBean(Principal.class)
+			.createBean(SopramonHibernate.class)
 			.run(args);
 			
 			myContext.close();

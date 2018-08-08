@@ -49,10 +49,8 @@ public class Principal {
         String p = lireChaine();
         Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
         System.out.println("Sopramon : " + s.getPseudo());
-        
 
     }
-	
 	
 
 	

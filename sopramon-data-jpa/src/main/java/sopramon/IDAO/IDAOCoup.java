@@ -30,7 +30,5 @@ import sopramon.model.Sopramon;
 		//public int countByCoupidContaining(String libelle);
 		
 		
-		
-		
 	}
 	 
