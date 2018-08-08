@@ -20,7 +20,7 @@ public class Capacite {
 	@Column(name = "CAPA_pointsdevie", length = 45, nullable = false)
 	@NotEmpty
 	@Size(max = 50)
-	private int pointsDeVie;
+	private int pointsdevie;
 
 	@Column(name = "CAPA_attaque", length = 45, nullable = false)
 	@NotEmpty
@@ -50,12 +50,12 @@ public class Capacite {
 		this.id = id;
 	}
 
-	public int getPointsDeVie() {
-		return pointsDeVie;
+	public int getPointsdevie() {
+		return pointsdevie;
 	}
 
-	public void setPointsDeVie(int pointsDeVie) {
-		this.pointsDeVie = pointsDeVie;
+	public void setPointsdevie(int pointsdevie) {
+		this.pointsdevie = pointsdevie;
 	}
 
 	public int getAttaque() {

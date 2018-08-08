@@ -23,9 +23,9 @@ public class Principal {
 
 		catch (Exception ex) {
 			return 0;
-			
+
 		}
-		
+
 	}
 
 	static String lireChaine() {
@@ -37,21 +37,18 @@ public class Principal {
 		}
 	}
 
-	/*public void findByUsernameAndPassword() {
-//      IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate(); 
-//      IDAOSopramon daoSopramon = new DAOSopramonHibernate();
-
-        System.out.println("Username : ");
-        String u = lireChaine();
-        System.out.println("Password : ");
-        String p = lireChaine();
-        Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
-        System.out.println("Sopramon : " + s.getPseudo());
-
-    }*/
-	
-
-	
+	/*
+	 * public void findByUsernameAndPassword() { // IDAOUtilisateur daoUtilisateur =
+	 * new DAOUtilisateurHibernate(); // IDAOSopramon daoSopramon = new
+	 * DAOSopramonHibernate();
+	 * 
+	 * System.out.println("Username : "); String u = lireChaine();
+	 * System.out.println("Password : "); String p = lireChaine(); Sopramon s =
+	 * (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
+	 * System.out.println("Sopramon : " + s.getPseudo());
+	 * 
+	 * }
+	 */
 
 	@Autowired
 	private IDAOSopramon daosopramon;
@@ -63,29 +60,20 @@ public class Principal {
 	private IDAOCombat daocombat;
 
 	public void run(String[] args) {
-		
 
- 		System.out.println("Bienvenue dans Sopramongame !");
- 		System.out.println("Quel est votre nom de joueur et votre mot de passe ? ");
- 		
- 		System.out.println("Username : ");
-        String u = lireChaine();
-        System.out.println("Password : ");
-        String p = lireChaine();
-        Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
-        s.getPseudo();
- 		
- 		boolean ok = true;
-	
- 		
- 		if(s != null) {
- 			
- 		
-		
- 		System.out.println("Votre sopramon : " + s.getPseudo());
+		System.out.println("Bienvenue dans Sopramongame !");
+		System.out.println("Quel est votre nom de joueur et votre mot de passe ? ");
 
-			
-			
+		System.out.println("Username : ");
+		String u = lireChaine();
+		System.out.println("Password : ");
+		String p = lireChaine();
+		Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
+        
+		
+		if (s != null) {
+			System.out.println("Votre sopramon : " + s.getPseudo());
+
 			int m = 0;
 			while (m < 1 || m > 2) {
 				System.out.println("....................");
@@ -95,7 +83,6 @@ public class Principal {
 				System.out.println("1 : Liste des Sopramons");
 
 				System.out.println("2 : Affronter le Boss");
-
 
 				System.out.println("Saisir un mode : ");
 
@@ -110,8 +97,9 @@ public class Principal {
 
 					for (Sopramon p1 : daosopramon.findAll()) {
 						System.out.println("Pour " + p1.getPseudo());
-						System.out.println(p1.getCapacite().getPointsDeVie() + " points de vie.");
-						System.out.println("Signe : " + p1.getSigne().getNom() + " Type : " + p1.getSigne().getTypeNom());
+						System.out.println(p1.getCapacite().getPointsdevie() + " points de vie.");
+						System.out
+								.println("Signe : " + p1.getSigne().getNom() + " Type : " + p1.getSigne().getTypeNom());
 						System.out.println("-----------------------------");
 
 						/*
@@ -120,20 +108,18 @@ public class Principal {
 
 					}
 
-				
-					
 					break;
 				case 2:
 					System.out.println("Combat contre le boss !");
 
 					System.out.println("S�l�ctionner l'identifiant de votre Sopramon : ");
 					for (Sopramon p2 : daosopramon.findAll()) {
-						System.out.println(p2.getNom());
-						System.out.println(p2.getCapacite().getPointsDeVie() + " points de vie.");
+						System.out.println(p2.getPseudo());
+						System.out.println(p2.getCapacite().getPointsdevie() + " points de vie.");
 						System.out.println(p2.getSigne().getNom());
 						System.out.println("-----------------------------");
 					}
-					int k = lireEntier();
+					int p2 = lireEntier();
 
 					System.out.println("Indiquer la date du jour : ");
 					String j = lireChaine();
@@ -171,59 +157,57 @@ public class Principal {
 		System.out.println("Mauvaise saisie ou compte inexistant. ");
 		System.out.println("Creer un compte");
 
-		System.out.println("Nom : ");
-		String a = lireChaine();
-		System.out.println("Prenom : ");
-		String b = lireChaine();
-		System.out.println("Nom de joueur : ");
-		String c = lireChaine();
-		System.out.println("Mot de passe : ");
-		String g = lireChaine();
-		System.out.println("Date de Naissance : ");
+		else {
+			System.out.println("Mauvaise saisie ou compte inexistant. ");
+			System.out.println("Creer un compte");
 
-		String d = lireChaine();
-		System.out.println("Signe Astrologique : ");
-		String f = lireChaine();
+			System.out.println("Nom : ");
+			String a = lireChaine();
+			System.out.println("Prenom : ");
+			String b = lireChaine();
+			System.out.println("Nom de joueur : ");
+			String c = lireChaine();
+			System.out.println("Mot de passe : ");
+			String g = lireChaine();
+			System.out.println("Date de Naissance : ");
 
-		System.out.println(
-				"F�licitations votre compte est cr�� ! Donnez maintenant un nom � votre Sopramon : ");
-		String n = lireChaine();
-		System.out.println("F�licitations votre Sopramon est n� !");
+			String d = lireChaine();
+			System.out.println("Signe Astrologique : ");
+			String f = lireChaine();
 
-		// IDAOSopramon daoSopramon = new DAOSopramonSQL();
+			System.out.println("F�licitations votre compte est cr�� ! Donnez maintenant un nom � votre Sopramon : ");
+			String n = lireChaine();
+			System.out.println("F�licitations votre Sopramon est n� !");
 
-		try {
-			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-			Date date = formatter.parse(d);
+			// IDAOSopramon daoSopramon = new DAOSopramonSQL();
 
-			Utilisateur nouveauUtilisateur = new Utilisateur();
+			try {
+				SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+				Date date = formatter.parse(d);
 
-			nouveauUtilisateur.setNom(a);
-			nouveauUtilisateur.setPrenom(b);
-			nouveauUtilisateur.setUsername(c);
-			nouveauUtilisateur.setPassword(g);
+				Utilisateur nouveauUtilisateur = new Utilisateur();
 
-			daoutilisateur.save(nouveauUtilisateur);
+				nouveauUtilisateur.setNom(a);
+				nouveauUtilisateur.setPrenom(b);
+				nouveauUtilisateur.setUsername(c);
+				nouveauUtilisateur.setPassword(g);
 
-			Sopramon nouveauSopramon = new Sopramon();
+				daoutilisateur.save(nouveauUtilisateur);
 
-			nouveauSopramon.setNom(n);
-			nouveauSopramon.setDateNaissance(date);
+				Sopramon nouveauSopramon = new Sopramon();
 
-			daosopramon.save(nouveauSopramon);
+				nouveauSopramon.setNom(n);
+				nouveauSopramon.setDateNaissance(date);
+
+				daosopramon.save(nouveauSopramon);
+
+			}
+
+			catch (Exception e) {
+				e.printStackTrace();
+			}
 
 		}
 
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		
 	}
-	  
 }
-}
-
-		
-		
-			
