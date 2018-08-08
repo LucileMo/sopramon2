@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import sopramon.IDAO.IDAOItem;
 import sopramon.IDAO.IDAOSopramon;
 import sopramon.IDAO.IDAOCombat;
-import sopramon.IDAO.IDAO;
+
 import sopramon.IDAO.IDAOUtilisateur;
 import sopramon.model.Item;
 import sopramon.model.Utilisateur;
@@ -32,7 +32,7 @@ public class SopramonGenerator {
 			
 			public void run (String[] args) {
 
-				daosopramon.findUnSopramon("planche"); 
+				
 			}	
 				
     	

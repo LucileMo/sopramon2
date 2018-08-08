@@ -11,22 +11,6 @@ import sopramon.model.Sopramon;
 	
 	public interface IDAOSopramon extends JpaRepository<Sopramon, Integer> {
 		
-		@Query("select s from Sopramon s where s.pseudo = :Caprilu")
-		public Sopramon findUnSopramon(@Param("Caprilu") String pseudo);
-		
-		public List<Sopramon> findByIdBetween(int id1, int id2);
-		
-		public Sopramon save (Sopramon entity);
-		
-		public List<Sopramon> findByPseudo(String libelle);
-		
-		//public List<Sopramon> findByPrix(String libelle);
-
-		public Sopramon findFirstByNom(String libelle);
-
-		public List<Sopramon> findTop10ByNomContainingOrderByIdDesc(String libelle);
-
-		public int countByNomContaining(String libelle);
 		
 		
 		

@@ -29,7 +29,7 @@ public class SopramonHibernate {
 		public void run (String[] args) {
 
 		
-			daosopramon.findByIdBetween(0, 5);
+		
 			
 			
 			

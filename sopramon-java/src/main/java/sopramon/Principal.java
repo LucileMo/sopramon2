@@ -43,15 +43,17 @@ public class Principal {
 //      IDAOUtilisateur daoUtilisateur = new DAOUtilisateurHibernate(); 
 //      IDAOSopramon daoSopramon = new DAOSopramonHibernate();
 
-		System.out.println("Username : ");
-		String u = lireChaine();
-		System.out.println("Password : ");
-		String p = lireChaine();
-		Utilisateur utilsateur = daoutilisateur.findByUsernameandPassword(u, p);
-		private String s = sopramon;
-		System.out.println("Sopramon : " + s.getPseudo());
+        System.out.println("Username : ");
+        String u = lireChaine();
+        System.out.println("Password : ");
+        String p = lireChaine();
+        Sopramon s = (Sopramon) daoutilisateur.findByUsernameAndPassword(u, p);
+        System.out.println("Sopramon : " + s.getPseudo());
 
-	}
+    }
+	
+
+	
 
 	@Autowired
 	private IDAOSopramon daosopramon;
@@ -63,7 +65,7 @@ public class Principal {
 	private IDAOCombat daocombat;
 
 	public void run(String[] args) {
-		{
+		
 
 			int m = 0;
 			while (m < 1 || m > 3) {
@@ -212,4 +214,3 @@ public class Principal {
 		}
 	}
 
-}

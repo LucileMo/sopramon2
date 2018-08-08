@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @PropertySource("classpath:data-source.properties")
 @ComponentScan({ "sopramon.DAO" })
 @EnableTransactionManagement
-@EnableJpaRepositories("sopramon.DAO")
+@EnableJpaRepositories("sopramon.IDAO")
 
 public class AppConfig {
 	@Autowired
