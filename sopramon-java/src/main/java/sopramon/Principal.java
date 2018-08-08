@@ -3,9 +3,6 @@ package sopramon;
 import java.util.Date;
 import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import sopramon.model.Combat;
 import sopramon.model.Sopramon;
@@ -26,8 +23,9 @@ public class Principal {
 
 		catch (Exception ex) {
 			return 0;
-
+			
 		}
+		
 	}
 
 	static String lireChaine() {
@@ -78,6 +76,7 @@ public class Principal {
         s.getPseudo();
  		
  		boolean ok = true;
+	
  		
  		if(s != null) {
  			
@@ -161,10 +160,12 @@ public class Principal {
 					m = lireEntier();
 
 				}
-
 			}
-		
-	} 
+
+ 		
+ 		}
+	
+			
 	
 	else {
 		System.out.println("Mauvaise saisie ou compte inexistant. ");
@@ -219,10 +220,10 @@ public class Principal {
 
 		
 	}
-	  }
+	  
 }
-		
-		
+}
+
 		
 		
 			
