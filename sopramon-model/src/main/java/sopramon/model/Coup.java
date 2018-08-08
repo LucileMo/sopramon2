@@ -28,6 +28,7 @@ public class Coup {
 	private int coupid;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="COUP_DATE")
 	private Date date;
 
 	@Column(name = "COUP_DEGATS", length = 50, nullable = false)

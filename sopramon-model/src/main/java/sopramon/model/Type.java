@@ -1,6 +1,7 @@
 package sopramon.model;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,8 +9,11 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-public enum Type {
 
+
+public enum Type {
+	
+	
 	feu(1), terre(2), air(3), eau(4);
 
 	public void setValeur(int valeur) {
