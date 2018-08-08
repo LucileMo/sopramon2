@@ -12,6 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.sources>1.8</maven.compiler.sources>
+  <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -21,6 +23,7 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    
    <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-entitymanager</artifactId>
@@ -33,4 +36,9 @@
     <version>6.0.11.Final</version>
 </dependency>
   </dependencies>
+  
+ 
+
+  
+  
 </project>
