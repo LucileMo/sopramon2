@@ -51,6 +51,8 @@ public class Test12 {
 
 		assertTrue(daoutilisateur.findById(1).isPresent());
 		assertNotNull(daoutilisateur.findById(1).get());
+		
+		
 	}
 
 	
