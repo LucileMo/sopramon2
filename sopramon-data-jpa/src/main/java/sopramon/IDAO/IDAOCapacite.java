@@ -7,15 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import sopramon.model.Sopramon;
+import sopramon.model.Capacite;
+import sopramon.model.Combat;
+
+
+public interface IDAOCapacite extends JpaRepository<Capacite, Integer> {
 	
+	public Capacite save(Capacite entity);	
 	
-	public interface IDAOSopramon extends JpaRepository<Sopramon, Integer> {
-		
-		
-		public List<Sopramon> findAll();
-		public Sopramon save(Sopramon entity);
-		
-		
-	}
-	 
+}
+

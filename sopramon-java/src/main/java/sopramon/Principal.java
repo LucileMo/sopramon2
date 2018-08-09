@@ -1,14 +1,23 @@
 package sopramon;
 
 import java.util.Date;
+
 import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.text.SimpleDateFormat;
+
+import sopramon.model.Arene;
+import sopramon.model.Boss;
+import sopramon.model.Capacite;
 import sopramon.model.Combat;
+import sopramon.model.Signe;
 import sopramon.model.Sopramon;
+import sopramon.model.Type;
 import sopramon.model.Utilisateur;
 import sopramon.IDAO.IDAOSopramon;
+import sopramon.IDAO.IDAOCapacite;
 import sopramon.IDAO.IDAOCombat;
+import sopramon.IDAO.IDAOSigne;
 import sopramon.IDAO.IDAOUtilisateur;
 
 public class Principal {
@@ -58,7 +67,13 @@ public class Principal {
 
 	@Autowired
 	private IDAOCombat daocombat;
-
+	
+	@Autowired
+	private IDAOSigne daosigne;
+	
+	@Autowired
+	private IDAOCapacite daocapacite;
+	
 	public void run(String[] args) {
 
 		System.out.println("Bienvenue dans Sopramongame !");
@@ -72,10 +87,11 @@ public class Principal {
         
 		
 		if (s != null) {
-			System.out.println("Votre sopramon : " + s.getPseudo());
-
+			
 			int m = 0;
 			while (m < 1 || m > 2) {
+				System.out.println("Votre sopramon : " + s.getPseudo());
+
 				System.out.println("....................");
 				System.out.println("........menu........");
 				System.out.println("....................");
@@ -112,7 +128,7 @@ public class Principal {
 				case 2:
 					System.out.println("Combat contre le boss !");
 
-					System.out.println("S�l�ctionner l'identifiant de votre Sopramon : ");
+					System.out.println("Selectionner l'identifiant de votre Sopramon : ");
 					for (Sopramon p2 : daosopramon.findAll()) {
 						System.out.println(p2.getPseudo());
 						System.out.println(p2.getCapacite().getPointsdevie() + " points de vie.");
@@ -127,11 +143,26 @@ public class Principal {
 					try {
 						SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 						Date date = formatter.parse(j);
+						
+						Sopramon nouveauSopramon = new Sopramon();
+
+						nouveauSopramon.setId(p2);
+
+						
+						Boss nouveauBoss = new Boss();
+
+						nouveauBoss.setId(1);
 
 						Combat nouveauCombat = new Combat();
 
 						// nouveauCombat.setSopramon(s);
+						nouveauCombat.setArene(Arene.donjon);
+						nouveauCombat.setBoss(nouveauBoss);
 						nouveauCombat.setDate(date);
+						nouveauCombat.setSopramon(nouveauSopramon);
+						nouveauCombat.setTours(7);
+						nouveauCombat.setType(Type.eau);
+						
 
 						daocombat.save(nouveauCombat);
 					}
@@ -153,9 +184,8 @@ public class Principal {
 	
 			
 	
-	 {
-		System.out.println("Mauvaise saisie ou compte inexistant. ");
-		System.out.println("Creer un compte");
+	 
+		
 
 		else {
 			System.out.println("Mauvaise saisie ou compte inexistant. ");
@@ -173,11 +203,14 @@ public class Principal {
 
 			String d = lireChaine();
 			System.out.println("Signe Astrologique : ");
-			String f = lireChaine();
+			System.out.println("Taper 1 pour Capricorne, 2 pour Verseau, 3 pour Poissons, 4 pour");
+			int f = 0;
+			f = lireEntier();
+			
 
-			System.out.println("F�licitations votre compte est cr�� ! Donnez maintenant un nom � votre Sopramon : ");
+			System.out.println("Felicitations votre compte est cree ! Donnez maintenant un pseudo a votre Sopramon : ");
 			String n = lireChaine();
-			System.out.println("F�licitations votre Sopramon est n� !");
+			System.out.println("Felicitations votre Sopramon est ne !");
 
 			// IDAOSopramon daoSopramon = new DAOSopramonSQL();
 
@@ -185,20 +218,39 @@ public class Principal {
 				SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 				Date date = formatter.parse(d);
 
-				Utilisateur nouveauUtilisateur = new Utilisateur();
+//				Utilisateur nouveauUtilisateur = new Utilisateur();
 
-				nouveauUtilisateur.setNom(a);
-				nouveauUtilisateur.setPrenom(b);
-				nouveauUtilisateur.setUsername(c);
-				nouveauUtilisateur.setPassword(g);
+//				daoutilisateur.save(nouveauUtilisateur);
 
-				daoutilisateur.save(nouveauUtilisateur);
+				Signe nouveauSigne = new Signe();
 
+				nouveauSigne.setId(f);
+				
+				Capacite nouveauCapacite = new Capacite();
+
+				nouveauCapacite.setPointsdevie(100);
+				nouveauCapacite.setAttaque(20);
+				nouveauCapacite.setDefense(20);
+				nouveauCapacite.setEsquive(20);
+				nouveauCapacite.setVitesse(20);
+			
+				daocapacite.save(nouveauCapacite);
+				
 				Sopramon nouveauSopramon = new Sopramon();
-
-				nouveauSopramon.setNom(n);
-				nouveauSopramon.setDateNaissance(date);
-
+				
+				nouveauSopramon.setNom(a);
+				nouveauSopramon.setPrenom(b);
+				nouveauSopramon.setUsername(c);
+				nouveauSopramon.setPassword(g);
+				
+				nouveauSopramon.setPseudo(n);
+				nouveauSopramon.setDate(date);
+				nouveauSopramon.setExperience(0);
+				nouveauSopramon.setNiveau(0);
+				nouveauSopramon.setArgent(500);
+				nouveauSopramon.setSigne(nouveauSigne);
+				nouveauSopramon.setCapacite(nouveauCapacite);
+				
 				daosopramon.save(nouveauSopramon);
 
 			}
@@ -210,4 +262,4 @@ public class Principal {
 		}
 
 	}
-}
+	}

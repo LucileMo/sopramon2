@@ -1,6 +1,7 @@
 package sopramon.model;
 
 import java.util.Date;
+
 import java.util.List;
 
 import javax.persistence.Column;
@@ -30,7 +31,6 @@ private String pseudo;
 @Column(name="SOPRA_DATE_NAISSANCE")
 @Temporal(TemporalType.TIMESTAMP)
 private java.util.Date Date;
-private Date dateNaissance;
 @Column(name="SOPRA_EXPERIENCE")
 @PositiveOrZero
 private int experience;
@@ -70,12 +70,7 @@ public Capacite getCapacite() {
 }
 public void setCapacite(Capacite capacite) {
 	this.capacite = capacite;
-}
-public Date getDateNaissance() {
-	return dateNaissance;
-}
-public void setDateNaissance(Date dateNaissance) {
-	this.dateNaissance = dateNaissance;
+
 }
 public int getExperience() {
 	return experience;
@@ -96,14 +91,13 @@ public void setArgent(double argent) {
 	this.argent = argent;
 }
 
+
 public Signe getSigne() {
 	return signe;
 }
 public void setSigne(Signe signe) {
 	this.signe = signe;
 }
-
-
 public java.util.Date getDate() {
 	return Date;
 }

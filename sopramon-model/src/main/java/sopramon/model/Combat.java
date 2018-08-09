@@ -70,6 +70,7 @@ public class Combat implements ICombattant {
 		this.id = id;
 	}
 
+
 	public Date getDate() {
 		return date;
 	}
