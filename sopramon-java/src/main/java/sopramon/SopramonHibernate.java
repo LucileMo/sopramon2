@@ -18,34 +18,91 @@ import sopramon.model.Utilisateur;
 
 public class SopramonHibernate {
 
-	@Autowired
-	private IDAOSopramon daosopramon;
-	@Autowired
+	static int lireEntier() {
 
-	private IDAOUtilisateur daoutilisateur;
-	@Autowired
-	private IDAOCombat daocombat;
+		Scanner myScanner = new Scanner(System.in);
+
+		try {
+			return myScanner.nextInt();
+		}
+
+		catch (Exception ex) {
+			return 0;
+
+		}
+
+	}
+
+	static String lireChaine() {
+		Scanner myScanner = new Scanner(System.in);
+		try {
+			return myScanner.next();
+		} catch (Exception ex) {
+			return null;
+		}
+	}
 
 	@Autowired
 	IDAOItem daoitem;
 
 	public void run(String[] args) {
 
-		// R READ ITEM
+		int m = 0;
+		while (m < 1 || m > 2) {
+			System.out.println("....................");
+			System.out.println("........menu........");
+			System.out.println("....................");
+			System.out.println("Saisir un mode : ");
 
+			System.out.println("1 : Consulter un item");
 
-		
-		
-		daoitem.findByNomContaining("Hache");
+			System.out.println("2 : Consulter tous les items");
 
-		daoitem.findAll();
+			m = lireEntier();
 
-		// U UPDATE ITEM
+			switch (m) {
+			case 1:
+				Item myItem = new Item(); {
 
-	//	daoitem.updateAnItem(1);
+				System.out.println("....................");
+				System.out.println("Consulter un item : ");
+				System.out.println("....................");
+
+				System.out.println("Saisir le nom de l'item : ");
+				String u = lireChaine();
+				daoitem.findByNomContaining("u");
+
+			}
+
+				break;
+
+			case 2: {
+				System.out.println("....................");
+				System.out.println("Consulter tous les items : ");
+				System.out.println("....................");
+
+				daoitem.findAll();
+
+			}
+
+				break;
+
+			}
+
+		}
+
 	}
-
 }
+
+// R READ ITEM
+// daoitem.findByNomContaining("Hache");
+
+// daoitem.findAll();
+
+// U UPDATE ITEM
+
+// daoitem.updateAnItem(1);
+
 //		Item myItem = new Item();
 //		daoproduit.findUnProduit("Planche");
 //		daoproduit.findByNom("planche"); 

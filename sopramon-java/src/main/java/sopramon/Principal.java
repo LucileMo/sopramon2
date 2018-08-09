@@ -3,6 +3,7 @@ package sopramon;
 import java.util.Date;
 
 import java.util.Scanner;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import java.text.SimpleDateFormat;
 
@@ -262,4 +263,4 @@ public class Principal {
 		}
 
 	}
-	}
+}

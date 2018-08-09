@@ -42,7 +42,7 @@ public interface IDAOItem extends JpaRepository<Item, Integer> {
 	// U UPDATE
 
 	//@Query("update i from Item s where s.id = :1, ")
-	//Stream<Item> updateAnItem(int String);
+//	Stream<Item> updateAnItem(int String);
 
 	// D DELETE
 
